@@ -2,7 +2,7 @@ Package.describe({
   git: 'https://github.com/zimme/meteor-active-route.git',
   name: 'zimme:active-route',
   summary: 'Active route helpers',
-  version: '2.3.3-rc.2'
+  version: '2.3.4'
 });
 
 Package.onUse(function(api) {
@@ -10,7 +10,6 @@ Package.onUse(function(api) {
 
   api.use([
     'check',
-    'coffeescript',
     'reactive-dict',
     'underscore'
   ]);
@@ -24,9 +23,9 @@ Package.onUse(function(api) {
 
   api.export('ActiveRoute');
 
-  api.addFiles('lib/activeroute.coffee');
+  api.addFiles('lib/activeroute.js');
 
-  api.addFiles('client/helpers.coffee', 'client');
+  api.addFiles('client/helpers.js', 'client');
 });
 
 Package.onTest(function(api) {
